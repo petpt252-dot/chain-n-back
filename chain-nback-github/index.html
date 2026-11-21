@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Chain N-back — The Archive of the Dead Kings</title>
+<meta name="description" content="A relational working-memory game: combine the current clue with the one from N moves ago and decide whether together they guarantee the statement. Adaptive levels up to 15-back, lives, ranks and timed sessions.">
+<meta name="theme-color" content="#050403">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Chain N-back">
+<link rel="stylesheet" href="style.css?v=14">
+<style>
+  html, body { margin: 0; min-height: 100%; background: #050403; }
+  #chain { min-height: 100vh; padding-bottom: env(safe-area-inset-bottom); }
+  /* phones: no double-tap zoom or text selection on the answer buttons */
+  .ch-ans, .ch-next, .cx-go, .ch-autobtn { touch-action: manipulation; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+</style>
+</head>
+<body>
+<section id="chain" class="training chain"></section>
+<script>
+  // standalone: English only, no surrounding app
+  window.LGApp = { lang: () => 'en', show: () => {}, goMenu: () => window.LGChain && window.LGChain.open(), standalone: true };
+</script>
+<script>window.LG_MUSIC_TRACKS = ['celtic'];   // site público: só a faixa livre de direitos</script>
+<script src="chain.js?v=26"></script>
+<script>
+  window.LGChain.open();
+  if ('serviceWorker' in navigator) window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+</script>
+</body>
+</html>

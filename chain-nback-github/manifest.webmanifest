@@ -1,0 +1,16 @@
+{
+  "name": "Chain N-back — The Archive of the Dead Kings",
+  "short_name": "Chain N-back",
+  "description": "Relational working-memory game: combine the current clue with the one from N moves ago.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050403",
+  "theme_color": "#050403",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
